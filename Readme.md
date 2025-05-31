@@ -6,7 +6,7 @@
 > Learning frontend one bug (and fix!) at a time. 🎯
 
 # projects
- - [Multi color theme switcher](../Frontend_Explorer/theme-switcher-js/Readme.md)
+ - [Multi color theme switcher](./theme-switcher-js/Readme.md)
 
 
 ## 🚀 What's This?

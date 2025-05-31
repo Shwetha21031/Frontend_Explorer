@@ -5,8 +5,9 @@
 | Item                 | Details                                        |
 |----------------------|------------------------------------------------|
 | **Tech Stack Used**  | Html, scss, Vanilla js                         |
-| **Inspiration**      | Managing async DB connections efficiently      |
-| **Improvements**     | Plan schema early and adopt TDD from the start |
+| **Learnt**           | using Vanilla Js learnt dom manipulation, learnt to add a favico, css pseudoselectors like ::befor, ::after, practiced scss and localstorage, made use of remix icon |
+| **Improvements**     | Plan to learn animation and some advanced js in the next project |
+| **Inspiration from**     | [color-theme-switcher](https://mxb.dev/blog/color-theme-switcher/) |
 
 ## 🖼️ Screenshots / Images
 
