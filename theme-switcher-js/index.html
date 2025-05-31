@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="script.js" defer></script>
+    <title>Theme Switcher | Js</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="main-container">
+        <div class="themes-tab">
+            <div class="themes-tab-head">
+                <p>Select Theme</p>
+                <button class="close-button" onclick="closeThemes()"><i class="ri-close-large-fill"></i></button>
+            </div>
+            <div class="themes-tab-body">
+                <ul>
+                    <li class="themes classic">
+                      <button onclick="switchTheme(event, 'classic')" class="theme-picker active">
+                        <span class="theme-name">Classic</span>
+                        <span class="theme-palette">
+                          <span class="col-1"></span>
+                          <span class="col-2"></span>
+                          <span class="col-3"></span>
+                          <span class="col-4"></span>
+                          <span class="col-5"></span>
+                        </span>
+                      </button>
+                    </li>
+                  
+                    <li class="themes dark">
+                      <button onclick="switchTheme(event, 'dark')" class="theme-picker">
+                        <span class="theme-name">Dark</span>
+                        <span class="theme-palette">
+                          <span class="col-1"></span>
+                          <span class="col-2"></span>
+                          <span class="col-3"></span>
+                          <span class="col-4"></span>
+                          <span class="col-5"></span>
+                        </span>
+                      </button>
+                    </li>
+
+                    <li class="themes koopa-beach">
+                      <button onclick="switchTheme(event, 'koopa-beach')" class="theme-picker">
+                        <span class="theme-name">Koopa Beach</span>
+                        <span class="theme-palette">
+                          <span class="col-1"></span>
+                          <span class="col-2"></span>
+                          <span class="col-3"></span>
+                          <span class="col-4"></span>
+                          <span class="col-5"></span>
+                        </span>
+                      </button>
+                    </li>
+                  
+                    <li class="themes moo-farm">
+                      <button onclick="switchTheme(event, 'moo-farm')" class="theme-picker">
+                        <span class="theme-name">Moo Farm</span>
+                        <span class="theme-palette">
+                          <span class="col-1"></span>
+                          <span class="col-2"></span>
+                          <span class="col-3"></span>
+                          <span class="col-4"></span>
+                          <span class="col-5"></span>
+                        </span>
+                      </button>
+                    </li>
+
+                    <li class="themes lobster-life">
+                        <button onclick="switchTheme(event, 'lobster-life')" class="theme-picker">
+                          <span class="theme-name"> Lobster Life</span>
+                          <span class="theme-palette">
+                            <span class="col-1"></span>
+                            <span class="col-2"></span>
+                            <span class="col-3"></span>
+                            <span class="col-4"></span>
+                            <span class="col-5"></span>
+                          </span>
+                        </button>
+                    </li>
+                  
+                    <li class="themes choco-mountain">
+                      <button onclick="switchTheme(event, 'choco-mountain')" class="theme-picker">
+                        <span class="theme-name">Choco Mountain</span>
+                        <span class="theme-palette">
+                          <span class="col-1"></span>
+                          <span class="col-2"></span>
+                          <span class="col-3"></span>
+                          <span class="col-4"></span>
+                          <span class="col-5"></span>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                  
+            </div>
+        </div>
+        <div class="nav">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+                <div class="logo-text">Pixel perfect <i class="ri-bard-fill"></i></div>
+            </div>
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab(event, 'Home')"><span>01</span>Home</button>
+                <button class="tab" onclick="switchTab(event, 'How')"><span>02</span>How It Works</button>
+                <button class="tab" onclick="switchTab(event, 'Why')"><span>03</span>Why Use Theme Switcher</button>
+                <button class="paint-icon" onclick="closeThemes()"><i class="ri-paint-brush-fill"></i></button>
+            </div>
+        </div>
+
+        <div class="container">
+          <!-- home -->
+          <div id="Home" class="tabContent">
+            <h1>Color Theme Switcher</h1>
+            <div class="date"><span>31 May 2025 - </span> Design, Code, Repeat.</div>
+
+            <div class="content">
+              Ever get tired of the same old boring UI?
+              <br><br>
+              <span class="bold">Yeah, me too.</span><br><br>
+              That’s why I built a feature that lets you shake things up — live theme switching!
+              
+              <br><br>
+              <div class="info">“Instead of two color schemes, I now have six! That’s four (4) better!”</div>
+              <br><br>
+
+              Wanna see the magic?
+              Click that <i>paint roller</i> button in the header.
+              Go on. I’ll wait.
+            </div>
+            
+          </div>
+
+
+          
+          <!-- How -->
+
+          <div id="How" class="tabContent">
+            <span class="lightweight">
+            Behind the scenes, the theme switcher updates CSS variables using JavaScript. These variables control everything from background colors to text highlights, allowing instant UI transformation.
+            </span>
+            <br><br>
+              
+            <span class="bold">Technology stack:</span>
+            <br>
+            - CSS variables for dynamic theming <br>
+            - SCSS for organization and power <br>
+            - JavaScript for interaction <br>
+            - localStorage for saving preferences <br><br>
+
+            <span class="bold">Example logic:</span> <br>
+            <div class="info">document.documentElement.style.setProperty('--primary-color', '#4A90E2');</div>
+            <br>
+            Every theme is like a new skin for your UI — fast, clean, and no reload required.
+          </div>
+
+
+          
+          <!-- Why -->
+          <div id="Why" class="tabContent">
+            <p>
+              Because you’re not basic, and your UI shouldn’t be either. <br><br>
+
+              <div class="bold">Theming perks:</div>
+              Reduces eye strain (Dark Mode, we see you) <br>
+              Makes your app feel alive and customizable <br>
+              Improves accessibility for everyone <br>
+              Gives users control (they love that!) <br><br>
+
+              <div class="bold">Give your app some personality. </div>
+              Let your interface reflect your mood — or your outfit. No judgment.
+              
+            </p>
+          </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

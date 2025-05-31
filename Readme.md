@@ -5,6 +5,9 @@
 > A playground where pixels meet curiosity.  
 > Learning frontend one bug (and fix!) at a time. 🎯
 
+# projects
+ - [Multi color theme switcher](../Frontend_Explorer/theme-switcher-js/Readme.md)
+
 
 ## 🚀 What's This?
 
