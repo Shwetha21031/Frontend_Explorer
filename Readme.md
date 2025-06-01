@@ -7,6 +7,7 @@
 
 # projects
  - [Multi color theme switcher](./theme-switcher-js/Readme.md)
+ - [Infinite Image slider](./Image-slider-js-anime/Readme.md)
 
 
 ## 🚀 What's This?
