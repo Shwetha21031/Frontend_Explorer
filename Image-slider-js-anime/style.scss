@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --content-clr: white;
+    --nickname-clr: aliceblue;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: #11181c;
+}
+
+.container {
+    width: 950px;
+    height: 600px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    // .list {
+    //     position: relative;
+
+        .item {
+            position: absolute;
+            inset: 0 0 0 0;
+            width: 100%;
+            height: 100%;
+          
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+          }
+    }
+
+    .content{
+        position:absolute;
+        color: var(--content-clr);
+        font-family: Poppins;
+        top:200px;
+        left:50px;
+        width: 400px;
+        text-shadow: 0 5px 10px rgba(0, 0, 58,0.5);
+
+        .item-name{
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 5px;
+        }
+        .nickname{
+            color: transparentize($color: #000000, $amount: 1);
+            font-weight: bold;
+            font-size: 40px;
+            -webkit-text-stroke: 1px white;
+        }
+        .des{
+            text-shadow: 0 5px 10px rgb(0, 0, 58);
+        }
+
+    }
+//   }
+
+  .button {
+    position: absolute;
+    top: 450px; 
+    left: 40px;
+    padding: 0 20px;
+    z-index: 10;
+
+    .prev, .next{
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 58, 0.5);
+        margin-right: 30px;
+        background-color: rgba($color: white, $alpha: 0.7);
+
+        &:hover{
+            background-color: white;
+        }
+
+        i{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+  }
+
+.container .thumbnails{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 100; 
+    width: max-content;
+    display: flex;
+    gap: 20px;
+
+    .t-item{
+        width: 150px;
+        height: 220px;
+        position: relative;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 2px 2px 5px rgba(0, 0, 58, 0.5); 
+            border-radius: 5px;
+        }
+
+        .t-content{
+            position: absolute;
+            bottom: 0;
+            color: aliceblue;
+            text-shadow: 0 5px 10px rgb(0, 0, 58);
+            padding: 10px;
+            font-family: poppins;
+
+            .title{
+                font-weight: bold;
+            }
+
+            .nick-name{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.container .list .item:nth-child(1){
+    z-index: 1;
+
+    .content{
+        .item-name, .nickname, .des{
+            transform: translateY(50px);
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent 0.5s 1s linear 1 forwards;
+        }
+
+        .item-name{
+            animation-delay: 0.5s;
+        }
+        .nickname{
+            animation-delay: 0.8s;
+        }
+        .des{
+            animation-delay: 1s;
+        }
+    } 
+}
+
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0px);
+    }
+}
+
+// animation when click next
+.container.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    border-radius: 5px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.container.next .thumbnails .t-item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.container.prev .list .item img{
+    z-index: 100;
+}
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.container.next .thumbnails{
+    animation: effectNext .5s linear 1 formwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+// prev click
+.container.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.container.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 30px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.container.prev .thumbnails .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.container.prev .list .item:nth-child(2) .content{
+    .item-name, .des, .nickname{
+        animation: contentOut 1.5s linear 1 forwards!important;
+    }
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+

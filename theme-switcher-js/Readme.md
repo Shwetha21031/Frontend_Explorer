@@ -17,7 +17,7 @@
 ![Different theme](./images/different_theme.png)
 *Description: Different themes available, color switch and font-family switch*
 
-![Favicon](./images/favicon.ico)
+![Favicon](./images/into_page.png)
 *Description: Favicon and Logo*
 
 ![Classic theme](./images/into_page.png)
