@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-col: #AE27FF;
+}
+
+/* Apply to the main scrollbar */
+html::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(30deg, #AD1DEB, #6E72FC); /* Gradient line */
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+/* Optional for Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #AD1DEB transparent; /* Fallback solid color, Firefox does not support gradients */
+}
+
+body {
+  list-style: none;
+  font-size: 16px;
+  font-family: Poppins;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .head-section {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  color: white;
+}
+body .head-section h1 {
+  font-weight: 700;
+}
+body .head-section h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+body .head-section .search-area {
+  border: 1px solid white;
+  display: flex;
+  width: 60%;
+  margin-top: 30px;
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+}
+body .head-section .search-area .search-box {
+  height: 100%;
+  padding: 10px 20px;
+  background: white;
+  width: 100%;
+}
+body .head-section .search-area .search-box input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  caret-color: var(--primary-col);
+  font-size: 16px;
+}
+body .head-section .search-area .search-box input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+body .head-section .search-area .search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 5px;
+  padding: 10px;
+  width: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-col);
+}
+body .head-section .search-area .search-btn i {
+  color: white;
+}
+body .head-section .search-area .search-btn:hover {
+  opacity: 0.8;
+}
+body .gallery {
+  margin: 20px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .gallery ul {
+  columns: 5 340px;
+  max-width: 95%;
+}
+body .gallery ul .img-container {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+body .gallery ul .img-container img {
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+}
+body .gallery ul .img-container .description {
+  width: 100%;
+  z-index: 1;
+  bottom: -100px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-image: linear-gradient(0deg, black, transparent);
+  color: white;
+}
+body .gallery ul .img-container .description .download {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-col);
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+}
+body .gallery ul .img-container .description .download:hover {
+  opacity: 0.7;
+}
+body .gallery ul .img-container:hover img {
+  scale: 1.05;
+  transition: 0.2s ease;
+}
+body .gallery ul .img-container:hover .description {
+  bottom: 0px;
+}
+body .more-btn {
+  width: 70%;
+  border: none;
+  background-image: linear-gradient(30deg, #AD1DEB, #6E72FC);
+  padding: 10px;
+  border-radius: 10px;
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 40px;
+  display: none;
+}
+body .more-btn:hover {
+  opacity: 0.8;
+}
+body .download-none {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
